@@ -2,6 +2,11 @@
   command = "npm run build"
   publish = "build/client"
 
+# Omit scanning package.json and package-lock.json for secrets
+# They may contain legitimate project identifiers
+[build.environment]
+  SECRETS_SCAN_OMIT_PATHS = "package.json,package-lock.json"
+
 # Do not hardcode secret values in this file.
 # Set the following environment variables in Netlify Site settings instead:
 # VITE_FIREBASE_API_KEY
