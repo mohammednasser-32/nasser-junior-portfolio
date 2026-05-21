@@ -196,6 +196,7 @@ body {
 
 .clients-title {
   font-size: 2.5rem;
+  margin-bottom: 30px;
 }
 
 .clients-status {
@@ -423,7 +424,7 @@ body {
 
 @media (max-width: 640px) {
   .portfolio-nav-link {
-    font-size: 0.875rem;
+    font-size: 1.2rem;
   }
 
   .portfolio-header {
@@ -456,5 +457,23 @@ body {
 
   .portfolio-shell::before {
     background-size: 200% auto;
+  }
+
+  .portfolio-nav-list {
+    gap: 0.35rem 1.5rem;
+  }
+
+  .portfolio-main {
+    padding: 0 2rem 2rem;
+  }
+
+  .home-image {
+    justify-content: center;
+  }
+
+  .clients-logo {
+    width: min(100%, 10rem);
+    height: auto;
+    min-height: 100px;
   }
 }
