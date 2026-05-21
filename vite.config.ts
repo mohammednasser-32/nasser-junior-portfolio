@@ -7,4 +7,9 @@ export default defineConfig({
   resolve: {
     tsconfigPaths: true,
   },
-});
+  server: {
+    host: '0.0.0.0',
+    allowedHosts: [
+      'hatchet-magnifier-emblem.ngrok-free.dev'
+    ]
+  }});
