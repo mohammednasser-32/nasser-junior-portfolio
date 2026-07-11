@@ -24,9 +24,15 @@ if (fs.existsSync(nestedDir)) {
   fs.rmdirSync(nestedDir);
 }
 
+const cnameSrc = path.resolve("CNAME");
+const cnameDest = path.join(clientDir, "CNAME");
 const fallback = path.join(clientDir, "__spa-fallback.html");
 const notFound = path.join(clientDir, "404.html");
 const index = path.join(clientDir, "index.html");
+
+if (fs.existsSync(cnameSrc)) {
+  fs.copyFileSync(cnameSrc, cnameDest);
+}
 
 if (fs.existsSync(fallback)) {
   fs.copyFileSync(fallback, notFound);
