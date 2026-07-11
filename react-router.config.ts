@@ -1,7 +1,7 @@
 import type { Config } from "@react-router/dev/config";
 
 export default {
-  // Config options...
-  // Disable SSR for static deployment on Netlify
   ssr: false,
+  basename: "/nasser-junior-portfolio",
+  prerender: true,
 } satisfies Config;

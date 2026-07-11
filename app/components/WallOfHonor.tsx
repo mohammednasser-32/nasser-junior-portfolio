@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 
+import { assetUrl } from "~/lib/assets";
 import { fetchHonorImages, type HonorImage } from "~/lib/comics";
 
 export function WallOfHonor() {
@@ -40,7 +41,7 @@ export function WallOfHonor() {
   return (
     <section className="wall-of-honor" aria-labelledby="wall-of-honor-title">
       <img
-        src="/assets/Wall of honor.webp"
+        src={assetUrl("assets/Wall of honor.webp")}
         alt="Wall of Honor"
         className="wall-of-honor-header"
       />
@@ -69,7 +70,7 @@ export function WallOfHonor() {
                   loading="lazy"
                 />
                 <img
-                  src="/assets/Frame.webp"
+                  src={assetUrl("assets/Frame.webp")}
                   alt=""
                   className="honor-frame-overlay"
                   aria-hidden

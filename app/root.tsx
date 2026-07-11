@@ -8,10 +8,11 @@ import {
 } from "react-router";
 
 import type { Route } from "./+types/root";
+import { assetUrl } from "~/lib/assets";
 import "./app.css";
 
 export const links: Route.LinksFunction = () => [
-  { rel: "icon", href: "/assets/Small icon.png", type: "image/png" },
+  { rel: "icon", href: assetUrl("assets/Small icon.png"), type: "image/png" },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -26,7 +27,14 @@ export const links: Route.LinksFunction = () => [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      style={
+        {
+          "--portfolio-background": `url("${assetUrl("assets/background.webp")}")`,
+        } as React.CSSProperties
+      }
+    >
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />

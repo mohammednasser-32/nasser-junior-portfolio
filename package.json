@@ -1,15 +1,16 @@
 {
   "name": "nasser-junior-portfolio",
-  "homepage": "mohammednasser-32.github.io",
+  "homepage": "https://mohammednasser-32.github.io/nasser-junior-portfolio",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "react-router build",
-    "dev": "react-router dev",
     "start": "react-router-serve ./build/server/index.js",
     "typecheck": "react-router typegen && tsc",
+    "dev": "vite",
+    "build": "react-router build",
+    "postbuild": "node scripts/prepare-gh-pages.mjs",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build/client"
   },
   "dependencies": {
     "@react-router/node": "7.15.1",

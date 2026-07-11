@@ -1,3 +1,4 @@
+import { assetUrl } from "~/lib/assets";
 import { Clients } from "~/components/Clients";
 import { WallOfHonor } from "~/components/WallOfHonor";
 
@@ -37,7 +38,7 @@ export default function Home() {
         </div>
 
         <div className="home-image">
-          <img src="/assets/me.webp" alt="Nasser Junior" />
+          <img src={assetUrl("assets/me.webp")} alt="Nasser Junior" />
         </div>
       </section>
 
