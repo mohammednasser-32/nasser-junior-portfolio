@@ -1,1 +1,0 @@
-import{O as e,t}from"./jsx-runtime-DFb8HAZR.js";import{t as n}from"./ComicGallery-C6mvQm2i.js";var r=t();function i({}){return[{title:`Selected Comics | Nasser Junior`}]}var a=e(function(){return(0,r.jsx)(n,{collection:`comics`})});export{a as default,i as meta};
